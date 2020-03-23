@@ -1,0 +1,27 @@
+#Create environment using:
+#$ conda env create --file=file-name.yml
+#We assume the environment has a gpu
+name: covid-19
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python=3.7
+- pip=20
+- jupyter
+- matplotlib
+- tensorflow=2.1
+- scikit-learn=0.22.2
+- pandas
+
+# project specific
+- geopandas
+- folium
+
+
+#project packages
+- pip:
+  #external requirements
+  - click
+  - PyYAML
+  - safitty
